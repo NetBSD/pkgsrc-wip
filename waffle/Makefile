@@ -18,7 +18,7 @@ PKGCONFIG_OVERRIDE+=	waffle.pc.in
 
 .include "../../devel/cmake/build.mk"
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .if empty(BUILDLINK_LDADD.dl)

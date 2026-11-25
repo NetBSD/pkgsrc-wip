@@ -22,7 +22,7 @@ pkgbase := modular-xorg-server
 .include "../../x11/libxcvt/buildlink3.mk"
 .include "../../x11/libXfont2/buildlink3.mk"
 .if ${PKG_BUILD_OPTIONS.modular-xorg-server:Mdri}
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
 

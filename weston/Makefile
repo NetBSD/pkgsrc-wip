@@ -23,7 +23,7 @@ SUBST_SED.allno=	s,true,false,
 .include "../../devel/pango/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
 .include "../../devel/wayland-protocols/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../wip/libevdev/buildlink3.mk"
 .include "../../wip/libinput/buildlink3.mk"

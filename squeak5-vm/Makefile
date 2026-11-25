@@ -67,7 +67,7 @@ do-install:
 	cd ${DESTDIR}${PREFIX}/bin && ${LN} -s spur64 squeak
 
 .include "../../devel/pango/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/cairo/buildlink3.mk"
 .include "../../security/openssl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"

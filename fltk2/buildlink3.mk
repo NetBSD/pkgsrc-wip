@@ -14,7 +14,7 @@ pkgbase := fltk2
 .include "../../mk/pkg-build-options.mk"
 
 .if ${PKG_BUILD_OPTIONS.fltk2:Mopengl}
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../graphics/glu/buildlink3.mk"
 .endif
 

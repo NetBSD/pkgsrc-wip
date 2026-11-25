@@ -8,7 +8,7 @@ WAFFLE_BUILDLINK3_MK:=
 BUILDLINK_API_DEPENDS.waffle+=	waffle>=1.5.2
 BUILDLINK_PKGSRCDIR.waffle?=	../../wip/waffle
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .endif	# WAFFLE_BUILDLINK3_MK
 

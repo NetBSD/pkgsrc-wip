@@ -8,6 +8,6 @@ PKGNAME=	gambas3-gb-opengl-sge-${GB_VERSION}
 MAINTAINER=	bastiangermann@fishpost.de
 COMMENT=	Simple OpenGL game engine for Gambas based on MD2 format
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

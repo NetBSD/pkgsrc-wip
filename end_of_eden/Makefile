@@ -38,7 +38,7 @@ post-install:
 
 .include "go-modules.mk"
 .include "../../lang/go/go-module.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXau/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

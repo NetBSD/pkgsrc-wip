@@ -60,7 +60,7 @@ do-install:
 .include "../../devel/pango/buildlink3.mk"
 # ERROR: lib/libswt-glx-gtk-4427.so: missing library: libGL.so.2
 # which is for X11_TYPE= native,
-#.include "../../graphics/MesaLib/buildlink3.mk"
+#.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/gtk2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/atk/buildlink3.mk"

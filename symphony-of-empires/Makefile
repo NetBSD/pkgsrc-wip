@@ -42,7 +42,7 @@ do-install:
 .include "../../devel/libatomic/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
 .include "../../fonts/SDL2_ttf/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../lang/lua54/buildlink3.mk"

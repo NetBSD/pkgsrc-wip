@@ -46,7 +46,7 @@ MAKE_ENV+=		GTK3=0
 
 .if !empty(PKG_OPTIONS:Mopengl)
 #PLIST.opengl=           yes
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 MAKE_ENV+=		OPENGL=1
 .else
 MAKE_ENV+=		OPENGL=0

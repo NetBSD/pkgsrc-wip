@@ -21,6 +21,6 @@ CONFIGURE_ARGS+=	--with-boost-regex=boost_regex-mt
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../devel/SDL_ttf/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

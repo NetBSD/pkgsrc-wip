@@ -34,7 +34,7 @@ pre-configure:
 BUILDLINK_DEPMETHOD.${RUBY_BASE}=	build
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"

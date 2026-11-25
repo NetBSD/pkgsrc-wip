@@ -27,7 +27,7 @@ pkgbase := efl
 .endif
 
 .if ${X11_TYPE} == "modular"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"

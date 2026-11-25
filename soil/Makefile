@@ -38,5 +38,5 @@ post-install:
 	${CHMOD} -x ${DESTDIR}${PREFIX}/include/SOIL.h
 	${CHMOD} -x ${DESTDIR}${PREFIX}/lib/libSOIL.a
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

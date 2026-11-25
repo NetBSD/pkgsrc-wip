@@ -23,7 +23,7 @@ USE_TOOLS+=		pkg-config
 .include "../../net/SDL_net/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
 .include "../../audio/SDL_mixer/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"

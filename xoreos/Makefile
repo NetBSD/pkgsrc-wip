@@ -37,7 +37,7 @@ do-install:
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../multimedia/xvidcore/buildlink3.mk"
 .include "../../textproc/libxml2/buildlink3.mk"

@@ -14,7 +14,7 @@ USE_TOOLS+=	msgmerge pkg-config
 .include "../../devel/kf6-kcoreaddons/buildlink3.mk"
 .include "../../devel/kf6-ki18n/buildlink3.mk"
 .include "../../devel/wayland/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/libepoxy/buildlink3.mk"
 .include "../../lang/qt6-qtdeclarative/buildlink3.mk"
 .include "../../multimedia/ffmpeg7/buildlink3.mk"

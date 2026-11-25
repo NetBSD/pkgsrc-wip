@@ -56,7 +56,7 @@ PLIST_SUBST+=	QUAKE_ARCH=${QUAKE_ARCH:Q}
 .include "../../audio/opusfile/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../multimedia/libogg/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

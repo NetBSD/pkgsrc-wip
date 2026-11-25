@@ -53,7 +53,7 @@ EGG_NAME=	${DISTNAME:S/-src-/_common-/}
 EGG_NAME2=	${DISTNAME:S/-src-/-/}
 PLIST_SUBST+=	EGG_INFODIR2=${EGG_NAME2}-py${PYVERSSUFFIX}.egg-info
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../lang/python/egg.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/wxGTK30/buildlink3.mk"

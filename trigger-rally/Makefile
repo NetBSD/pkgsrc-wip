@@ -53,7 +53,7 @@ post-install:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../devel/physfs/buildlink3.mk"

@@ -17,6 +17,6 @@ GNU_CONFIGURE=	yes
 CONFIGURE_ARGS+=	--disable-xf86vidmode
 CONFIGURE_ARGS+=	--enable-fast
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

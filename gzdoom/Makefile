@@ -26,7 +26,7 @@ CXXFLAGS+=	-D PKGSRC_DOOM_PATH='"${PREFIX}/share/games/doom"'
 .include "../../devel/cmake/build.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

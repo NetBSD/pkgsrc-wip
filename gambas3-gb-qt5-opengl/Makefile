@@ -12,7 +12,7 @@ BUILDLINK_DEPMETHOD.qt5-qtsvg=		build
 BUILDLINK_DEPMETHOD.qt5-qtwebkit=	build
 BUILDLINK_DEPMETHOD.qt5-qtx11extras=	build
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/qt5-qtbase/buildlink3.mk"
 .include "../../x11/qt5-qtsvg/buildlink3.mk"
 .include "../../x11/qt5-qtwebkit/buildlink3.mk"

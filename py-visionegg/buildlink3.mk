@@ -17,7 +17,7 @@ PYTHON_VERSIONS_ACCEPTED=	27 # py-Numeric
 # see PR 23845 for details
 .include "../../mk/opengl.buildlink3.mk"
 .else
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif
 .include "../../devel/py-game/buildlink3.mk"
 .include "../../math/py-Numeric/buildlink3.mk"

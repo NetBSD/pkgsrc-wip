@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.soqt+=	soqt>=1.4.1
 BUILDLINK_PKGSRCDIR.soqt?=	../../wip/soqt
 
 .include "../../wip/Coin/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/qt6-qtbase/buildlink3.mk"
 .endif	# SOQT_BUILDLINK3_MK
 

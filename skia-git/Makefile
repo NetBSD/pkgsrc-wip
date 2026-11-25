@@ -76,7 +76,7 @@ git-depends.mk:
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../fonts/harfbuzz/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/libjpeg-turbo/buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../textproc/icu/buildlink3.mk"

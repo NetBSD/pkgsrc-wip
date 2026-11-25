@@ -25,5 +25,5 @@ USE_LANGUAGES+=		c
 .include "../../devel/cmake/build.mk"
 
 .include "../../graphics/png/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

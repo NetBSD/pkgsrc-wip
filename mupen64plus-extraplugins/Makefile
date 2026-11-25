@@ -26,7 +26,7 @@ MAKE_ENV+=	APIDIR="${PREFIX}/include/mupen64plus"
 INSTALL_ENV+=	PREFIX=${PREFIX}
 
 .include "../../graphics/glew/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../wip/mupen64plus/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 TOOL_DEPENDS+=	cpuflags>=1.42:../../devel/cpuflags

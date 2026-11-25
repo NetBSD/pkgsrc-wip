@@ -10,7 +10,7 @@ BUILDLINK_ABI_DEPENDS.fltk11?=	fltk11>=1.1.10nb7<1.3
 BUILDLINK_PKGSRCDIR.fltk11?=	../../wip/fltk11
 BUILDLINK_FILES.fltk11+=	include/Fl/*
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

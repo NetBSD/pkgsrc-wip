@@ -10,7 +10,7 @@ BUILDLINK_PKGSRCDIR.OpenGLUT?=		../../wip/OpenGLUT
 
 MESA_REQD+=	6.0
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/x11.buildlink3.mk"
 .endif # OPENGLUT_BUILDLINK3_MK

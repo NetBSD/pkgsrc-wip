@@ -28,7 +28,7 @@ PRINT_PLIST_AWK+=	{ if (/modesetting/) $$0 = "$${PLIST.dri}" $$0 }
 .if !empty(PKG_OPTIONS:Mdri)
 .include "../../graphics/libepoxy/buildlink3.mk"
 BUILDLINK_API_DEPENDS.MesaLib+=	MesaLib>=11
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libdrm/buildlink3.mk"
 .include "../../x11/libxshmfence/buildlink3.mk"
 PLIST.dri=		yes

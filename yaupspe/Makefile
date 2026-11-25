@@ -21,7 +21,7 @@ do-install:
 	cd ${WRKSRC}/src && \
 		${INSTALL_PROGRAM} yaupspe ${DESTDIR}${PREFIX}/bin
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../devel/ncurses/buildlink3.mk"
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -42,7 +42,7 @@ SUBST_MESSAGE.unbl3=	Fix paths to buildlink directories in installed files.
 .include "../../devel/qt6-qttools/buildlink3.mk"
 .include "../../geography/qt6-qtlocation/buildlink3.mk"
 .include "../../geography/qt6-qtpositioning/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/qt6-qt3d/buildlink3.mk"
 .include "../../graphics/qt6-qtcharts/buildlink3.mk"
 .include "../../graphics/qt6-qtdatavis3d/buildlink3.mk"

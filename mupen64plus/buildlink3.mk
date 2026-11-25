@@ -19,7 +19,7 @@ pkgbase := mupen64plus
 .include "../../audio/libsamplerate/buildlink3.mk"
 .endif
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

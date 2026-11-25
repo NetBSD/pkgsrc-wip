@@ -42,7 +42,7 @@ post-install:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/jpeg.buildlink3.mk"

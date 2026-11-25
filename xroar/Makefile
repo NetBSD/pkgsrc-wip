@@ -29,7 +29,7 @@ CONFIGURE_ARGS+=	--with-gtk3
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/glib2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .if ${OPSYS} != "Darwin"
 .include "../../x11/gtk3/buildlink3.mk"

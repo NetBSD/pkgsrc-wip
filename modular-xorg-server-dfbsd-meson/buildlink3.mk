@@ -27,7 +27,7 @@ BUILDLINK_DEPMETHOD.libpciaccess=	full
 .include "../../x11/libXfont/buildlink3.mk"
 .else
 .include "../../x11/libXfont2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk" # XXX should not be needed for non-dri build
+.include "../../mk/mesa.buildlink3.mk" # XXX should not be needed for non-dri build
 .endif
 .endif # MODULAR_XORG_SERVER_BUILDLINK3_MK
 

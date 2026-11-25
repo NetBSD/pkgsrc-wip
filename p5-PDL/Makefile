@@ -38,7 +38,7 @@ post-install:
 #	${RM} -f   ${DESTDIR}/usr/pkg/lib/perl5/vendor_perl/5.42.0/x86_64-netbsd-thread-multi/PDL/pdldoc.db
 	${RM} -f ${DESTDIR}/usr/pkg/lib/perl5/vendor_perl/*/*/PDL/pdldoc.db
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"

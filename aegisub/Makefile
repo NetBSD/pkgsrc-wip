@@ -28,7 +28,7 @@ USE_LANGUAGES=	c c++
 .include "../../devel/googletest/buildlink3.mk"
 .include "../../fonts/fontconfig/buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 BUILDLINK_API_DEPENDS.LuaJIT2+=	LuaJIT2>=2.1.1713773202nb1
 .include "../../lang/LuaJIT2/buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"

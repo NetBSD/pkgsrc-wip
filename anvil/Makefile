@@ -52,7 +52,7 @@ do-install:
 .include "go-modules-work.mk"
 
 .include "../../devel/wayland/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../lang/go/go-module.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"

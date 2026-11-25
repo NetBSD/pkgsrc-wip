@@ -50,7 +50,7 @@ DEPENDS+=	wxGTK32>=3.2.1nb1:../../x11/wxGTK32
 
 .include "../../lang/python/pyversion.mk"
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 #.include "../../lang/lua/buildlink3.mk" # uses a vendored version 5.4.3
 .include "../../lang/${PYPACKAGE}/buildlink3.mk"

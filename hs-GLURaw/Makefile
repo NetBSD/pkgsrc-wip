@@ -10,6 +10,6 @@ COMMENT=	Raw binding for the OpenGL graphics system
 LICENSE=	modified-bsd
 
 .include "../../wip/mk/haskell.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../wip/hs-OpenGLRaw/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

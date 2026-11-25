@@ -95,7 +95,7 @@ CONFIGURE_ENV+=		ac_cv_c_fortify_enabled=no
 # Wine will use system frameworks on Darwin.
 .if ${OPSYS} != "Darwin"
 PLIST.desktop=		yes
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .endif

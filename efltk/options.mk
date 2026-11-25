@@ -11,7 +11,7 @@ PLIST_VARS+=		${PKG_SUPPORTED_OPTIONS}
 PLIST.opengl=		yes
 CONFIGURE_ARGS+=	--enable-opengl
 MAKE_ENV+=		HAVE_OPENGL=yes
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .else
 CONFIGURE_ARGS+=	--disable-opengl
 MAKE_ENV+=		HAVE_OPENGL=no

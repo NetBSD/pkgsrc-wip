@@ -53,7 +53,7 @@ post-install:
 # uses remove_history() and history_list()
 .include "../../devel/readline/buildlink3.mk"
 .include "../../mk/xaw.buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glw/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 

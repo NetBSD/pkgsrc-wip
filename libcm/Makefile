@@ -18,7 +18,7 @@ USE_LANGUAGES+=	c c++
 PKGCONFIG_OVERRIDE+=	cm.pc.in
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

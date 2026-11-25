@@ -35,5 +35,5 @@ do-install:
 
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/scons/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -18,7 +18,7 @@ USE_LANGUAGES=	c c++ fortran
 ### MACRO-CONFIGURATION : SANS DETAILS ###
 
 ### OpenGL
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 
 ###  parallel //
 .include "../../mk/mpi.buildlink3.mk"

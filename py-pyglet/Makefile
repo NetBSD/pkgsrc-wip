@@ -19,7 +19,7 @@ USE_LANGUAGES=	# none
 
 .include "../../lang/python/egg.mk"
 .include "../../x11/gtk2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 #.include "../../lang/python/application.mk"
 #.include "../../lang/python/extension.mk"
 .include "../../mk/bsd.pkg.mk"

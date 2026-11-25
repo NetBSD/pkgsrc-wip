@@ -75,7 +75,7 @@ do-install:
 
 .include "../../lang/python/application.mk"
 .include "../../wip/clhep/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"

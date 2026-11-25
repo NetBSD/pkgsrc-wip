@@ -17,7 +17,7 @@ PY_PATCHPLIST=		yes
 PYDISTUTILSPKG=		yes
 
 .include "../../lang/python/extension.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freetype2/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../graphics/cal3d/buildlink3.mk"

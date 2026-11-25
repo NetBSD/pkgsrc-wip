@@ -22,5 +22,5 @@ USE_LIBTOOL=	yes
 INSTALL_TEMPLATES=	${FILESDIR}/INSTALL
 DEINSTALL_TEMPLATES=	${FILESDIR}/DEINSTALL
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

@@ -93,7 +93,7 @@ post-install:
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"
 .if ${OPSYS} != "Darwin"
-.  include "../../graphics/MesaLib/buildlink3.mk"
+.  include "../../mk/mesa.buildlink3.mk"
 .  include "../../x11/gtk2/buildlink3.mk"
 .  include "../../x11/gtk3/buildlink3.mk"
 .  include "../../x11/libX11/buildlink3.mk"

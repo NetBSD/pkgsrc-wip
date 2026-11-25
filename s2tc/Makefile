@@ -28,6 +28,6 @@ DEINSTALL_TEMPLATES=	${FILESDIR}/DEINSTALL
 pre-configure:
 	cd ${WRKSRC} && ${SH} ./autogen.sh
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

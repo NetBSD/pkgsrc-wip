@@ -25,7 +25,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/craft ${DESTDIR}${PREFIX}/bin/craft
 
 .include "../../databases/sqlite3/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glew/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

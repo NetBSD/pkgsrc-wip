@@ -42,7 +42,7 @@ do-install:
 	${INSTALL_PROGRAM} ${WRKSRC}/OpenLara ${DESTDIR}${PREFIX}/bin/
 
 .include "../../devel/SDL2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/bsd.pkg.mk"

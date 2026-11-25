@@ -48,7 +48,7 @@ post-install:
 .include "../../devel/cmake/build.mk"
 .include "../../audio/dssi/buildlink3.mk"
 .include "../../audio/liblo/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../math/fftw/buildlink3.mk"
 .include "../../textproc/mxml/buildlink3.mk"
 .include "../../x11/fltk/buildlink3.mk"

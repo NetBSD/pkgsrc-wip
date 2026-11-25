@@ -21,6 +21,6 @@ BUILDLINK_DEPMETHOD.libSM=	build
 .include "../../x11/libSM/buildlink3.mk"
 .include "../../x11/libXmu/buildlink3.mk"
 .include "../../x11/libXt/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/gtkglext/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

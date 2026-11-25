@@ -25,7 +25,7 @@ SUBST_FILES.suffix+=	pyformex/lib/configure
 SUBST_MESSAGE.suffix=	Fixing header search suffix.
 
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/freeglut/buildlink3.mk"
 .include "../../math/py-numpy/buildlink3.mk"
 .include "../../sysutils/desktop-file-utils/desktopdb.mk"

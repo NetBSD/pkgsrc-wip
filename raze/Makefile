@@ -29,7 +29,7 @@ CXXFLAGS+=	-D PKGSRC_RAZE_PATH='"${PREFIX}/share/games/raze"'
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/libexecinfo/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/libwebp/buildlink3.mk"
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"

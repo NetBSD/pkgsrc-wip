@@ -11,7 +11,7 @@ BUILDLINK_PKGSRCDIR.kyra2?=	../../wip/kyra2
 
 .include "../../devel/SDL/buildlink3.mk"
 .include "../../graphics/SDL_image/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .endif # KYRA2_BUILDLINK3_MK
 
 BUILDLINK_TREE+=	-kyra2

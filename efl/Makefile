@@ -84,7 +84,7 @@ MESON_ARGS+=			-Dopengl=base
 
 .else
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libXcursor/buildlink3.mk"
 .include "../../x11/libXinerama/buildlink3.mk"
 .include "../../x11/libXScrnSaver/buildlink3.mk"

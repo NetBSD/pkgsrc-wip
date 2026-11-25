@@ -29,7 +29,7 @@ CMAKE_CONFIGURE_ARGS+=	-D_FFMPEG_AVFORMAT_LIBRARY_DIRS=${PREFIX}/lib/ffmpeg4
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/boost-libs/buildlink3.mk"
 .include "../../devel/bullet/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glm/buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"
 .include "../../security/gnutls/buildlink3.mk"

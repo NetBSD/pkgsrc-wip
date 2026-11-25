@@ -16,6 +16,6 @@ USE_TOOLS+=	pkg-config
 USE_LANGUAGES=	c c++
 
 .include "../../devel/cmake/build.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

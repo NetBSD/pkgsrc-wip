@@ -44,7 +44,7 @@ do-install:
 	cd ${WRKSRC}/media && ${PAX} -rw -pp . ${DESTDIR}${PREFIX}/share/tesseract/media
 
 .include "../../audio/SDL2_mixer/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/SDL2_image/buildlink3.mk"
 .include "../../devel/SDL2/buildlink3.mk"
 .include "../../devel/zlib/buildlink3.mk"

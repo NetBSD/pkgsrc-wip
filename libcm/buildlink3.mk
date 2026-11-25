@@ -9,7 +9,7 @@ BUILDLINK_API_DEPENDS.libcm+=	libcm>=0.1.1
 BUILDLINK_PKGSRCDIR.libcm?=	../../wip/libcm
 
 .include "../../devel/glib2/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../x11/libXcomposite/buildlink3.mk"
 .include "../../x11/libXdamage/buildlink3.mk"

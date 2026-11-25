@@ -49,7 +49,7 @@ BUILDLINK_TRANSFORM+=	rm:-Werror=char-subscripts
 
 BUILDLINK_DEPMETHOD.libXt?=	build
 
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 .include "../../mk/jpeg.buildlink3.mk"
 .include "../../graphics/png/buildlink3.mk"

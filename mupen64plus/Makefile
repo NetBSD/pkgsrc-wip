@@ -32,7 +32,7 @@ do-install:
 .include "../../devel/boost-headers/buildlink3.mk"
 .include "../../graphics/glu/buildlink3.mk"
 BUILDLINK_DEPMETHOD.glu=build
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 BUILDLINK_DEPMETHOD.MesaLib=build
 .include "../../mk/dlopen.buildlink3.mk"
 .include "../../mk/pthread.buildlink3.mk"

@@ -71,7 +71,7 @@ do-install:
 .include "../../audio/openal-soft/buildlink3.mk"
 .include "../../devel/scons/buildlink3.mk"
 .include "../../graphics/hicolor-icon-theme/buildlink3.mk"
-.include "../../graphics/MesaLib/buildlink3.mk"
+.include "../../mk/mesa.buildlink3.mk"
 .include "../../multimedia/ffmpeg4/buildlink3.mk"
 .include "../../www/curl/buildlink3.mk"
 .include "../../x11/libX11/buildlink3.mk"
