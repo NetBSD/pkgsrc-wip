@@ -9,19 +9,20 @@ MAINTAINER=	ivan@ivanpollak.com
 HOMEPAGE=	https://github.com/FelixKratz/jankyborders/
 COMMENT=	Window border system for macOS
 LICENSE=	gnu-gpl-v3
+
 USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
-# Only available for macOS
-ONLY_FOR_PLATFORM=	Darwin-*-aarch64
+# This program uses APIs that only exist on macOS.
+# TODO: Address CPU types, if it doesn't work on all of them.
+# TODO: Adjust for versions that are supported.
+ONLY_FOR_PLATFORM=	Darwin-*-*
 
-# We need to copy some files over manually because the makefile doesn't have an
-# install target.
+# Upstream makeefile lacks an install target.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
-
 do-install:
 	cd ${WRKSRC} && \
-	${MV} bin/borders ${DESTDIR}${PREFIX}/bin && \
+	${INSTALL} bin/borders ${DESTDIR}${PREFIX}/bin && \
 	${INSTALL_MAN} docs/borders.1 ${DESTDIR}${PREFIX}/${PKGMANDIR}/man1
 
 .include "../../mk/bsd.pkg.mk"

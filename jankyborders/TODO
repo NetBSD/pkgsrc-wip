@@ -1,0 +1,12 @@
+  - Adjust ONLY_FOR to either not specify the CPU type, if it
+    builds/works on x86-64, or to explain why not -- it's not in
+    upstream's README.  IF it doesn't work, and upstream doesn't
+    document that and why, file a bug upstream.
+
+  - Adjust ONLY_FOR for the earlier macOS version that works, and up.
+
+  - WRKSC uses distname which is lower case but the tarball unpacks
+    differently.  Ideally, ask upstream to fix.  Working around th
+    upstream bug, use different case for fetch and WRKDIR, without
+    duplicating the version (etiher VERSION= or some fancy makefile
+    pattern).
