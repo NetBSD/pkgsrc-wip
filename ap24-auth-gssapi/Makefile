@@ -12,7 +12,6 @@ HOMEPAGE=	https://github.com/gssapi/mod_auth_gssapi
 COMMENT=	Apache module for GSSAPI authentication
 LICENSE=	isc
 
-PKG_APACHE_ACCEPTED=	apache24
 APACHE_MODULE=		yes
 
 USE_LIBTOOL=		yes

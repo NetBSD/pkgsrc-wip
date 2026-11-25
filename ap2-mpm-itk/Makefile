@@ -11,8 +11,6 @@ LICENSE=	apache-2.0
 
 GNU_CONFIGURE=	yes
 
-PKG_APACHE_ACCEPTED=	apache24
-
 APACHE_MODULE=          yes
 APACHE_MODULE_NAME=     mod_mpm_itk.la
 

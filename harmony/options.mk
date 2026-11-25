@@ -62,9 +62,7 @@ DEPENDS+=	p5-HTML-Parser>=3.40:../../www/p5-HTML-Parser
 .if !empty(PKG_OPTIONS:Mbugzilla-modperl)
 DEPENDS+=	p5-CGI>=3.11:../../www/p5-CGI
 DEPENDS+=	p5-Apache-DBI>=0.96:../../databases/p5-Apache-DBI
-.  if defined(PKG_APACHE)
-.    include "../../www/ap2-perl/buildlink3.mk"
-.  endif
+.  include "../../www/ap2-perl/buildlink3.mk"
 .endif
 
 ###
