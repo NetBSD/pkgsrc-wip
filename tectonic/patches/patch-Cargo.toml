@@ -1,0 +1,15 @@
+$NetBSD$
+
+Use harfbuzz from pkgsc.
+
+--- Cargo.toml.orig	2026-11-25 11:22:02.582249445 +0000
++++ Cargo.toml
+@@ -114,7 +114,7 @@ tracing-subscriber = { version = "0.3", features = ["e
+ tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+ 
+ [features]
+-default = ["geturl-reqwest", "serialization"]
++default = ["geturl-reqwest", "serialization", "external-harfbuzz"]
+ 
+ # The main motivation for this feature was to be able to compile without
+ # proc-macros (via serde-derive), for statically-linked targets which can't use
