@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	polyfactory-3.3.0
+DISTNAME=	polyfactory-3.5.0
 PKGNAME=	${PYPKGPREFIX}-${DISTNAME}
 CATEGORIES=	devel
 MASTER_SITES=	${MASTER_SITE_PYPI:=p/polyfactory/}
