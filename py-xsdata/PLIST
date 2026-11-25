@@ -5,6 +5,7 @@ ${PYSITELIB}/${WHEEL_INFODIR}/RECORD
 ${PYSITELIB}/${WHEEL_INFODIR}/WHEEL
 ${PYSITELIB}/${WHEEL_INFODIR}/entry_points.txt
 ${PYSITELIB}/${WHEEL_INFODIR}/licenses/LICENSE
+${PYSITELIB}/${WHEEL_INFODIR}/licenses/THIRD_PARTY_LICENSES.md
 ${PYSITELIB}/${WHEEL_INFODIR}/top_level.txt
 ${PYSITELIB}/xsdata/__init__.py
 ${PYSITELIB}/xsdata/__init__.pyc
@@ -171,6 +172,9 @@ ${PYSITELIB}/xsdata/formats/converter.pyo
 ${PYSITELIB}/xsdata/formats/dataclass/__init__.py
 ${PYSITELIB}/xsdata/formats/dataclass/__init__.pyc
 ${PYSITELIB}/xsdata/formats/dataclass/__init__.pyo
+${PYSITELIB}/xsdata/formats/dataclass/bytecode.py
+${PYSITELIB}/xsdata/formats/dataclass/bytecode.pyc
+${PYSITELIB}/xsdata/formats/dataclass/bytecode.pyo
 ${PYSITELIB}/xsdata/formats/dataclass/client.py
 ${PYSITELIB}/xsdata/formats/dataclass/client.pyc
 ${PYSITELIB}/xsdata/formats/dataclass/client.pyo
@@ -343,6 +347,7 @@ ${PYSITELIB}/xsdata/models/xsd.py
 ${PYSITELIB}/xsdata/models/xsd.pyc
 ${PYSITELIB}/xsdata/models/xsd.pyo
 ${PYSITELIB}/xsdata/py.typed
+${PYSITELIB}/xsdata/schemas/LICENSE.W3C
 ${PYSITELIB}/xsdata/schemas/mathml3-common.xsd
 ${PYSITELIB}/xsdata/schemas/mathml3-content.xsd
 ${PYSITELIB}/xsdata/schemas/mathml3-presentation.xsd
