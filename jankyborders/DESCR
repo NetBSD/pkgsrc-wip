@@ -1,0 +1,23 @@
+TODO: Adjust the following lines from README.md
+
+# JankyBorders
+
+<img align="right" width="50%" src="images/screenshot.png" alt="Screenshot">
+
+*JankyBorders* is a lightweight tool designed to add colored borders to
+user windows on macOS 14.0+. It enhances the user experience by visually
+highlighting the currently focused window without relying on the accessibility
+API, thereby being faster than comparable tools.
+
+## Usage
+### Install
+The binary can be made available by installing it through Homebrew:
+```bash
+brew tap FelixKratz/formulae
+brew install borders
+```
+
+For a comprehensive overview of all available options and commands, consult the
+man page: `man borders`. A rendered version of the man page is available in the
+[Wiki](https://github.com/FelixKratz/JankyBorders/wiki/Man-Page).
+...

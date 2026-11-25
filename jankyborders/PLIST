@@ -1,0 +1,3 @@
+@comment $NetBSD$
+bin/borders
+man/man1/borders.1
