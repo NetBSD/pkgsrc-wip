@@ -1,6 +1,8 @@
-chromium: update to 158.0.8127.36
+chromium: update to 158.0.8127.88
 
-* 158.0.8127.36
-This update includes 204 security fixes. Please see the Chrome Security Page for more information.
+* 158.0.8127.88
+This update includes 1 security fixes. Please see the Chrome Security Page for more information.
 
-See: https://chromereleases.googleblog.com/2026/11/stable-channel-update-for-desktop_01699533288.html
+[N/A][554051967] Critical CVE-2026-134401: Improper input validation in Variations.
+Reported by Google on 2026-08-28
+
