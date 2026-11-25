@@ -7,16 +7,16 @@ GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	ivan@ivanpollak.com
 HOMEPAGE=	https://github.com/FelixKratz/jankyborders/
-COMMENT=	A window border system for macOS
+COMMENT=	Window border system for macOS
 LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake
-WRKSRC=	${WRKDIR}/${DISTNAME}
+WRKSRC=		${WRKDIR}/${DISTNAME}
 
 # Only available for macOS
 ONLY_FOR_PLATFORM=	Darwin-*-aarch64
 
 # We need to copy some files over manually because the makefile doesn't have an
-# install target.
+# install target.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
 
 do-install:

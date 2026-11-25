@@ -1,0 +1,8 @@
+jankyborders: add version 1.9.0
+
+Added by arcathrax into wip
+
+JankyBorders is a lightweight tool designed to add colored borders to user
+windows on macOS 14.0+. It enhances the user experience by visually
+highlighting the currently focused window without relying on the accessibility
+API, thereby being faster than comparable tools.
