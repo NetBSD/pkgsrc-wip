@@ -1,7 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	jankyborders-1.9.0
-CATEGORIES=	vm
+CATEGORIES=	wm
 MASTER_SITES=	${MASTER_SITE_GITHUB:=FelixKratz/}
 GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
