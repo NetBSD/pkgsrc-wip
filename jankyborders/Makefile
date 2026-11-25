@@ -10,11 +10,15 @@ HOMEPAGE=	https://github.com/FelixKratz/jankyborders/
 COMMENT=	A window border system for macOS
 LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake
-
 WRKSRC=	${WRKDIR}/${DISTNAME}
 
-# Has no install target so we need to manually copy over the files
+# Only available for macOS
+ONLY_FOR_PLATFORM=	Darwin-*-aarch64
+
+# We need to copy some files over manually because the makefile doesn't have an
+# install target.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
+
 do-install:
 	cd ${WRKSRC} && \
 	${MV} bin/borders ${DESTDIR}${PREFIX}/bin && \
