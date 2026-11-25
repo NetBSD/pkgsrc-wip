@@ -7,7 +7,7 @@ GITHUB_TAG=	refs/tags/v${PKGVERSION_NOREV}
 
 MAINTAINER=	ivan@ivanpollak.com
 HOMEPAGE=	https://github.com/FelixKratz/jankyborders/
-COMMENT=	TODO: Short description of the package
+COMMENT=	A window border system for macOS
 LICENSE=	gnu-gpl-v3
 USE_TOOLS+=	gmake
 
