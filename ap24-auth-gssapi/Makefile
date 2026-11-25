@@ -1,7 +1,7 @@
 #	$NetBSD$
 
 DISTNAME=	mod_auth_gssapi-1.6.5
-PKGNAME=	${DISTNAME:S/mod/${APACHE_PKG_PREFIX}/:S/_/-/g}
+PKGNAME=	${DISTNAME:S/mod/ap24/:S/_/-/g}
 CATEGORIES=	www
 MASTER_SITES=	${MASTER_SITE_GITHUB:=gssapi/}
 GITHUB_PROJECT=	${DISTNAME:C/-.*//}

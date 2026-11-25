@@ -32,7 +32,7 @@ INSTALLATION_DIRS=	${DOCDIR} ${EGDIR}/config
 
 .include "../../lang/php/phpversion.mk"
 
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=5.2:../../www/ap-php
 DEPENDS+=	${PHP_PKG_PREFIX}-pgsql>=4.3.1:../../databases/php-pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-pdo_pgsql>=${PHP_BASE_VERS}:../../databases/php-pdo_pgsql
 DEPENDS+=	${PHP_PKG_PREFIX}-libawl>=0.56:../../devel/php-libawl

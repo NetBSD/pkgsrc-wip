@@ -16,7 +16,7 @@ USE_LANGUAGES=			# none
 MYSQL_VERSIONS_ACCEPTED=	55
 
 # base on PHP package
-DEPENDS+=	${APACHE_PKG_PREFIX}-${PHP_PKG_PREFIX}>=4.4.0:../../www/ap-php
+DEPENDS+=	ap24-${PHP_PKG_PREFIX}>=4.4.0:../../www/ap-php
 
 # extensions buildable with both PHP 5.x
 DEPENDS+=	${PHP_PKG_PREFIX}-apc>=4.4.0:../../www/php-apc

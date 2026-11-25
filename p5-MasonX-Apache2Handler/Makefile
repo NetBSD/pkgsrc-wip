@@ -9,9 +9,9 @@ MAINTAINER=		pkgsrc-users@NetBSD.org
 HOMEPAGE=		https://metacpan.org/release/BEAU/MasonX-Apache2Handler-0.05
 COMMENT=		Perl-based Apache handler for Apache2 with Mason
 
-DEPENDS+=		p5-${APACHE_PKG_PREFIX}-libapreq2>=2.4:../../www/p5-libapreq2
+DEPENDS+=		p5-ap24-libapreq2>=2.4:../../www/p5-libapreq2
 DEPENDS+=		p5-HTML-Mason>=1.26:../../www/p5-HTML-Mason
-DEPENDS+=		${APACHE_PKG_PREFIX}-perl>=1.99.17:../../www/ap2-perl
+DEPENDS+=		ap24-perl>=1.99.17:../../www/ap2-perl
 
 PERL5_PACKLIST=		auto/MasonX/Apache2Handler/.packlist
 
