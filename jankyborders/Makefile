@@ -14,9 +14,7 @@ USE_TOOLS+=	gmake
 WRKSRC=		${WRKDIR}/${DISTNAME}
 
 # This program uses APIs that only exist on macOS.
-# TODO: Address CPU types, if it doesn't work on all of them.
-# TODO: Adjust for versions that are supported.
-ONLY_FOR_PLATFORM=	Darwin-*-*
+ONLY_FOR_PLATFORM= Darwin-2[3-9].*-*
 
 # Upstream makeefile lacks an install target.
 INSTALLATION_DIRS=	bin ${PKGMANDIR}/man1
