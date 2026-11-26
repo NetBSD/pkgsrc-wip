@@ -1,0 +1,9 @@
+www/chawan: update to 0.5.3
+
+* fix incorrect serialization of some IPv6 URLs
+* fix JS_GetTypedArrayBuffer length reporting in QJS
+* fix navigation to URL with hash trimming off hash sometimes
+* fix parsing of non-array charset labels in config
+* fix broken window.open shim
+* fix various memory safety bugs in QJS
+* fix meta refresh in inactive tab freezing the UI

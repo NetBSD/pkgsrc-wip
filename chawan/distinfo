@@ -1,0 +1,5 @@
+$NetBSD: distinfo,v 1.2 2026/11/08 21:53:46 wiz Exp $
+
+BLAKE2s (chawan/v0.5.3.tar.gz) = 90c031094c12db839720308eca70dcd316d62f0d030b037b998c3709c40e2863
+SHA512 (chawan/v0.5.3.tar.gz) = 8e855d8ea4d6fadac6e8b5109edf2a017a23754aefb6e5194e65d4eebfeb78bdb8bf686bb59c343084e9feaeadabc151db6e60f6925d7b0d99d10d41221bb7d9
+Size (chawan/v0.5.3.tar.gz) = 3795500 bytes
