@@ -15,7 +15,7 @@ COMMENT=	SemanticScuttle is a social bookmarking tool
 LICENSE=	gnu-gpl-v2
 
 .include "../../lang/php/phpversion.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 DEPENDS+=	ap24-${PHP_PKG_PREFIX}-[0-9]*:../../www/ap-php
 
 USE_TOOLS+=	pax

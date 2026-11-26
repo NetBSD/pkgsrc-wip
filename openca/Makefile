@@ -160,6 +160,6 @@ post-install:
 	${CHOWN} -R ${SHAREOWN}:${SHAREGRP} ${DOCDIR}
 
 .include "../../security/openssl/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/perl5/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

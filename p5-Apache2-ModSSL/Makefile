@@ -16,5 +16,5 @@ PERL5_PACKLIST=	auto/Apache2/ModSSL/.packlist
 
 .include "../../lang/perl5/module.mk"
 .include "../../www/ap2-perl/buildlink3.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

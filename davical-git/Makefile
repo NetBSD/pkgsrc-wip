@@ -136,5 +136,5 @@ do-install:
 .include "../../wip/mk/git-package.mk"
 .include "../../mk/pgsql.buildlink3.mk"
 .include "../../devel/php-libawl/Makefile.common"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

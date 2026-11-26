@@ -64,6 +64,6 @@ BUILDLINK_API_DEPENDS.mit-krb5+=mit-krb5>=1.11
 .include "../../devel/nss_wrapper/buildlink3.mk"
 .include "../../devel/socket_wrapper/buildlink3.mk"
 .include "../../lang/python/application.mk"
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/krb5.buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

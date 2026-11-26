@@ -1,5 +1,4 @@
 # $NetBSD: Makefile,v 1.13 2014/06/22 19:57:10 thomasklausner Exp $
-#
 
 DISTNAME=	jakarta-tomcat-connectors-jk2-${AP_JK_VER}-src
 PKGNAME=	ap2-jk2-${AP_JK_VER}
@@ -30,5 +29,5 @@ do-install:
 	${INSTALL_DATA} ${WRKDIR}/${DISTNAME}/jk/conf/workers.properties \
 		${EGDIR}
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

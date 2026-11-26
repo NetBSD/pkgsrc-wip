@@ -17,7 +17,7 @@ do-install:
 	${INSTALL_DATA_DIR} ${DESTDIR}${PREFIX}/share/httpd/htdocs/uebimiau
 	${CP} -R ${WRKSRC}/* ${DESTDIR}${PREFIX}/share/httpd/htdocs/uebimiau
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/php/phpversion.mk"
 
 .include "../../mk/bsd.pkg.mk"

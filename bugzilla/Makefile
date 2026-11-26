@@ -145,5 +145,5 @@ do-install:
 	)
 	${RM} ${DESTDIR}${BZDIR}/Bugzilla/Install/Filesystem.pm.orig
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../mk/bsd.pkg.mk"

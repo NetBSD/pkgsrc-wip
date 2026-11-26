@@ -15,6 +15,6 @@ DEPENDS+=		ap24-perl>=1.99.17:../../www/ap2-perl
 
 PERL5_PACKLIST=		auto/MasonX/Apache2Handler/.packlist
 
-.include "../../mk/apache.mk"
+.include "../../www/apache24/buildlink3.mk"
 .include "../../lang/perl5/module.mk"
 .include "../../mk/bsd.pkg.mk"
