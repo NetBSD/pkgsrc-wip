@@ -2,40 +2,47 @@ $NetBSD$
 
 Fix installation dirs
 
---- CMakeLists.txt.orig	2026-06-18 08:04:34.000000000 +0000
+--- CMakeLists.txt.orig	2026-08-31 04:02:08.000000000 +0000
 +++ CMakeLists.txt
-@@ -1,6 +1,6 @@
- cmake_minimum_required (VERSION 3.5)
- 
--project(CRCpp VERSION 1.2.1.0)
-+project(CRCpp VERSION 1.2.2.0)
- 
- include(CMakePackageConfigHelpers)
- include(GNUInstallDirs)
-@@ -32,21 +32,22 @@ configure_file(
+@@ -35,7 +35,8 @@ configure_file(
  configure_package_config_file(
      cmake/CRCppConfig.cmake.in
      "${CMAKE_CURRENT_BINARY_DIR}/CRCppConfig.cmake"
 -    INSTALL_DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/crcpp")
 +    INSTALL_DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/crcpp"
 +    PATH_VARS CMAKE_INSTALL_INCLUDEDIR)
+ 
  write_basic_package_version_file(CRCppConfigVersion.cmake
-                                  VERSION ${PACKAGE_VERSION}
-                                  COMPATIBILITY SameMajorVersion
-                                  ARCH_INDEPENDENT)
- 
- # Installation
--install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/inc/ DESTINATION ${CMAKE_INSTALL_INCLUDE_DIR})
-+install(DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}/inc/ DESTINATION ${CMAKE_INSTALL_INCLUDEDIR})
+                                  VERSION ${PROJECT_VERSION}
+@@ -46,11 +47,11 @@ write_basic_package_version_file(CRCppCo
+ install(DIRECTORY "${CMAKE_CURRENT_SOURCE_DIR}/inc/" DESTINATION "${CMAKE_INSTALL_INCLUDEDIR}")
  install(FILES
-           ${CMAKE_CURRENT_BINARY_DIR}/CRCpp.pc
--        DESTINATION ${CMAKE_INSTALL_DATADIR}/pkgconfig)
-+        DESTINATION ${CMAKE_INSTALL_LIBDIR}/pkgconfig)
+           "${CMAKE_CURRENT_BINARY_DIR}/CRCpp.pc"
+-        DESTINATION "${CMAKE_INSTALL_DATADIR}/pkgconfig")
++        DESTINATION "${CMAKE_INSTALL_LIBDIR}/pkgconfig")
  install(FILES
- 	  ${CMAKE_CURRENT_BINARY_DIR}/CRCppConfig.cmake
- 	  ${CMAKE_CURRENT_BINARY_DIR}/CRCppConfigVersion.cmake
--	DESTINATION ${CMAKE_INSTALL_DATADIR}/cmake/crcpp)
-+	DESTINATION ${CMAKE_INSTALL_LIBDIR}/cmake/crcpp)
+           "${CMAKE_CURRENT_BINARY_DIR}/CRCppConfig.cmake"
+           "${CMAKE_CURRENT_BINARY_DIR}/CRCppConfigVersion.cmake"
+-        DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/crcpp")
++        DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/crcpp")
  
- # Documentation
- if (BUILD_DOC)
+ install(TARGETS ${PROJECT_NAME}
+         EXPORT CRCppTargets)
+@@ -58,14 +59,14 @@ install(TARGETS ${PROJECT_NAME}
+ install(EXPORT CRCppTargets
+         FILE CRCppTargets.cmake
+         NAMESPACE CRCpp::
+-        DESTINATION "${CMAKE_INSTALL_DATADIR}/cmake/crcpp")
++        DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/crcpp")
+ 
+ if(CMAKE_VERSION VERSION_GREATER_EQUAL "4.3")
+     install(PACKAGE_INFO CRCpp
+-            DESTINATION "${CMAKE_INSTALL_DATADIR}/cps"
++            DESTINATION "${CMAKE_INSTALL_LIBDIR}/cps"
+             EXPORT CRCppTargets
+             VERSION ${PROJECT_VERSION}
+-            COMPAT_VERSION "1.0.0.0" 
++            COMPAT_VERSION "1.0.0.0"
+             LICENSE "BSD-3-Clause"
+             DESCRIPTION "Easy to use and fast C++ CRC library."
+             HOMEPAGE_URL "https://github.com/d-bahr/CRCpp")

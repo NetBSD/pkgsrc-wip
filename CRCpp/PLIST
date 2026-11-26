@@ -2,4 +2,6 @@
 include/CRC.h
 lib/cmake/crcpp/CRCppConfig.cmake
 lib/cmake/crcpp/CRCppConfigVersion.cmake
+lib/cmake/crcpp/CRCppTargets.cmake
+lib/cps/CRCpp.cps
 lib/pkgconfig/CRCpp.pc

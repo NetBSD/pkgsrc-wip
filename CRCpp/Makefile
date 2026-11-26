@@ -1,6 +1,6 @@
 # $NetBSD$
 
-DISTNAME=	release-1.2.2.0
+DISTNAME=	release-1.2.3.0
 PKGNAME=	${GITHUB_PROJECT}-${DISTNAME:S/release-//}
 CATEGORIES=	math
 MASTER_SITES=	${MASTER_SITE_GITHUB:=d-bahr/}
