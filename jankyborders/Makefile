@@ -11,7 +11,11 @@ COMMENT=	Window border system for macOS
 LICENSE=	gnu-gpl-v3
 
 USE_TOOLS+=	gmake
-WRKSRC=		${WRKDIR}/${DISTNAME}
+
+# Has capital letters in the folder's name due to upstream being JankyBorders.
+# GitHub redirects lower-case request like ours to the upper-case one. While
+# this doesn't fail on macOS, extracting it on NetBSD fails.
+WRKSRC=		${WRKDIR}/JankyBorders-${PKGVERSION_NOREV}
 
 # This program uses APIs that only exist on macOS.
 ONLY_FOR_PLATFORM= Darwin-2[3-9].*-*
