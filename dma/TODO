@@ -1,20 +1,29 @@
 Add comments explaining DMA_ROOT_USER and why it isn't root.  The
 "root isn't root, but then we use REAL_ROOT" is confusing; there's
-obviously some grand plan that isn't obvious.
+obviously some grand plan that isn't obvious. --> DONE :
+ad8a9dd74e dma: Explain suid plan
 
 Add a comment explaining why the other-x bit is off for
 dma-mbox-create, but the other-r bit is on (4554), because this is
-unusual.
+unusual. --> DONE :
+ad8a9dd74e dma: Explain suid plan
 
 Clarify the comment about glibc/getprogname.  In particular "uses
 glibc" and "is Linux" aren't really the same thing.  If it's a proxy
 that's good enough for now, that's ok, but say it.  Or if I'm confused
-add a comment that would straighten out someone with my confusion.
+add a comment that would straighten out someone with my confusion. --> DONE
+ad8a9dd74e dma: Explain suid plan
+-and-
+b8e6abb48a dma: Makefile comment for getprogname() upstream issue 
 
 It seems odd to be using SPECIAL_PERMS so much when I would expect
 dma's own makefiles to install with the right user/group/perms.
 (pkgsrc install doesn't set these, but instead adds them to METALOG
 and then the tarball uses that; this is the normal pattern).  Maybe
 upstream just doesn't do this, but it seems odd, and it seems like a
-workaroudnd for the DMA_ROOT_USER not being root.
+workaroudnd for the DMA_ROOT_USER not being root. --> N/A 
+tech-pkg clarification that METALOG is not used in pkgsrc : 
+https://mail-index.netbsd.org/tech-pkg/2026/11/23/msg032696.html
 
+Upstream issues have been raised and documented in patches/Makefile
+where relevant.
