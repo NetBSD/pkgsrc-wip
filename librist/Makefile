@@ -1,9 +1,9 @@
 # $NetBSD$
 
-DISTNAME=	librist-v0.2.18
+DISTNAME=	librist-v0.2.20
 PKGNAME=	${DISTNAME:S,-v,-,}
 CATEGORIES=	net
-MASTER_SITES=	https://code.videolan.org/rist/librist/-/archive/v0.2.18/
+MASTER_SITES=	https://code.videolan.org/rist/librist/-/archive/v${PKGVERSION_NOREV}/
 
 MAINTAINER=	bartosz.kuzma@gmail.com
 HOMEPAGE=	https://code.videolan.org/rist/librist/
