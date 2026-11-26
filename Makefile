@@ -2002,6 +2002,7 @@ SUBDIR+=	ladybird-git
 SUBDIR+=	lambertw
 SUBDIR+=	lander
 SUBDIR+=	lanq
+SUBDIR+=	laser
 SUBDIR+=	lasi
 SUBDIR+=	lazyjj
 SUBDIR+=	lbt

@@ -1,0 +1,6 @@
+@comment $NetBSD$
+bin/lsr
+share/laser/laser_default_colors.lua
+share/laser/laser_default_filters.lua
+share/laser/laser_default_utils.lua
+share/laser/lsr.lua

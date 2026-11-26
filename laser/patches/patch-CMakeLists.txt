@@ -1,0 +1,25 @@
+$NetBSD$
+
+Fix installation of lua scripts
+
+--- CMakeLists.txt.orig	2026-03-07 21:39:30.000000000 +0000
++++ CMakeLists.txt
+@@ -55,14 +55,12 @@ set(LUA_INSTALL_PATH "${CMAKE_INSTALL_PR
+ 
+ file(GLOB LUA_SCRIPTS "${CMAKE_CURRENT_SOURCE_DIR}/lua/*.lua")
+ 
+-add_custom_command(TARGET lsr POST_BUILD
+-    COMMENT "Copying Lua scripts to ${LUA_SCRIPTS_INSTALL_PATH}"
+-    COMMAND ${CMAKE_COMMAND} -E make_directory "${LUA_SCRIPTS_INSTALL_PATH}"
+-    COMMAND ${CMAKE_COMMAND} -E copy ${LUA_SCRIPTS} "${LUA_SCRIPTS_INSTALL_PATH}"
+-)
+-
+ install(TARGETS lsr DESTINATION bin)
+ 
++install(FILES ${LUA_SCRIPTS}
++    DESTINATION "${LUA_SCRIPTS_INSTALL_PATH}"
++)
++
+ if(NOT TARGET uninstall)
+     configure_file(
+         "${CMAKE_CURRENT_SOURCE_DIR}/cmake_uninstall.cmake.in"

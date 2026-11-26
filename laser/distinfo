@@ -1,0 +1,6 @@
+$NetBSD$
+
+BLAKE2s (laser-1.7.8.tar.gz) = 30a478a6d762d2baf084fdcae6ff0a51253f1acc5cd3d2677f30a8f861277a7a
+SHA512 (laser-1.7.8.tar.gz) = 25bdffce6e86fa708163ddc379f885d655a40ef02fb13155911d1f71394cd411a1243aacc84acd7c27c5f2fd82f8516721e52ade945ce5f443f3257688f7a722
+Size (laser-1.7.8.tar.gz) = 674312 bytes
+SHA1 (patch-CMakeLists.txt) = a73144f965c6015421016d2e8496d29f353547e3
