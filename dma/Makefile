@@ -11,24 +11,19 @@ HOMEPAGE=	https://github.com/corecode/dma
 COMMENT=	The DragonFly Mail Agent
 LICENSE=	modified-bsd
 
-BUILD_DEFS+=		VARBASE
+USE_LANGUAGES=		c
+# Not documented, but uses // comments.
+USE_CC_FEATURES=	c99
+
+USE_TOOLS+=	flex byacc
+
+.include "../../mk/bsd.prefs.mk"
 
 PKG_SYSCONFSUBDIR=	dma
 EGDIR=			${PREFIX}/share/examples/${PKGBASE}
 DOCDIR=			${PREFIX}/share/doc/${PKGBASE}
 
-USE_TOOLS+=	flex byacc
-
-LIBS.Darwin+=	-lresolv
-LIBS.Linux+=	-lresolv
-LIBS.SunOS+=	-lresolv -lsocket -lnsl
-
-USE_LANGUAGES=		c
-# Not documented, but uses // comments.
-USE_CC_FEATURES=	c99
-
-.include "../../mk/bsd.prefs.mk"
-
+BUILD_DEFS+=	VARBASE
 DMA_SPOOLDIR=	${VARBASE}/spool/dma
 
 .if ${UNPRIVILEGED:tl} == "yes"
@@ -54,6 +49,17 @@ PKG_USERS=		${DMA_USER}:${DMA_GROUP}
 PKG_GROUPS=		${DMA_GROUP}
 .endif
 
+
+MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
+MAKE_ENV+=	LIBS=${LIBS:Q}
+
+MAKE_FLAGS=	"LIBEXEC=${PREFIX}/libexec"
+MAKE_FLAGS+=	"MAN=${PREFIX}/${PKGMANDIR}"
+# Work around upstream bug requiring gmake when BSD make is documented
+# to work; delete when updating to a release with
+# https://github.com/corecode/dma/pull/170.
+MAKE_FLAGS+=	version=${PKGVERSION_NOREV}
+
 # dma has awkward getprogname detection; essentially one must define
 # HAVE_ on any system without glibc (and getprogname must be present),
 # and one should not define it on glibc systems.  We use OPSYS Linux
@@ -69,20 +75,16 @@ CFLAGS+=	-DDMA_GROUP=\"${DMA_GROUP}\"
 # as root.  https://github.com/corecode/dma/issues/175
 CFLAGS+=	-DDMA_ROOT_USER=\"${DMA_USER}\"
 
-MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
-MAKE_ENV+=	LIBS=${LIBS:Q}
+LIBS.Darwin+=	-lresolv
+LIBS.Linux+=	-lresolv
+LIBS.SunOS+=	-lresolv -lsocket -lnsl
 
-MAKE_FLAGS=	"LIBEXEC=${PREFIX}/libexec"
-MAKE_FLAGS+=	"MAN=${PREFIX}/${PKGMANDIR}"
-# Work around upstream bug requiring gmake when BSD make is documented
-# to work; delete when updating to a release with
-# https://github.com/corecode/dma/pull/170.
-MAKE_FLAGS+=	version=${PKGVERSION_NOREV}
+
+post-extract:
+	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
+	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
 
 INSTALLATION_DIRS=	${EGDIR} ${DOCDIR}
-
-CONF_FILES=	${EGDIR}/dma.conf ${PKG_SYSCONFDIR}/dma.conf
-CONF_FILES+=	${EGDIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf
 
 SUBST_CLASSES+=		spool
 SUBST_STAGE.spool=	pre-configure
@@ -95,9 +97,9 @@ SUBST_STAGE.mailer=	pre-configure
 SUBST_FILES.mailer=	${WRKDIR}/mailer.conf ${WRKDIR}/README.pkgsrc
 SUBST_VARS.mailer=	PREFIX
 
-post-extract:
-	${CP} ${FILESDIR}/mailer.conf ${WRKDIR}/mailer.conf
-	${CP} ${FILESDIR}/README.pkgsrc ${WRKDIR}/README.pkgsrc
+CONF_FILES=	${EGDIR}/dma.conf ${PKG_SYSCONFDIR}/dma.conf
+CONF_FILES+=	${EGDIR}/auth.conf ${PKG_SYSCONFDIR}/auth.conf
+
 
 post-install:
 	${INSTALL_DATA} ${WRKSRC}/dma.conf ${DESTDIR}${EGDIR}/dma.conf
