@@ -1,6 +1,7 @@
 # $NetBSD$
 
 DISTNAME=	dma-0.14
+PKGREVISION=	1
 CATEGORIES=	mail
 MASTER_SITES=	${MASTER_SITE_GITHUB:=corecode/}
 GITHUB_TAG=	v${PKGVERSION_NOREV}
@@ -28,14 +29,19 @@ USE_CC_FEATURES=	c99
 
 .include "../../mk/bsd.prefs.mk"
 
-DMA_GROUP?=	dma
-DMA_ROOT_USER?=	dma
 DMA_SPOOLDIR=	${VARBASE}/spool/dma
 
 .if ${UNPRIVILEGED:tl} == "yes"
+DMA_USER?=	${UNPRIVILEGED_USER}
+DMA_GROUP?=	${UNPRIVILEGED_GROUP}
+
+# TODO: Explain whether or not and why not allowing group write is appropriate
 OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${UNPRIVILEGED_USER} ${UNPRIVILEGED_GROUP} 0700
 .else
-OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${DMA_ROOT_USER} ${DMA_GROUP} 0770
+DMA_USER?=	dma
+DMA_GROUP?=	dma
+
+OWN_DIRS_PERMS+=	${DMA_SPOOLDIR} ${DMA_USER} ${DMA_GROUP} 0770
 # Upstream makefile sets sgid/suid but we patched that out.
 # dma is sgid for queue access
 SPECIAL_PERMS+=		${PREFIX}/libexec/dma \
@@ -44,8 +50,8 @@ SPECIAL_PERMS+=		${PREFIX}/libexec/dma \
 # grants other read permission for unclear reasons; mirror that as not harmful.
 SPECIAL_PERMS+=		${PREFIX}/libexec/dma-mbox-create \
 			${REAL_ROOT_USER} ${DMA_GROUP} 4554
+PKG_USERS=		${DMA_USER}:${DMA_GROUP}
 PKG_GROUPS=		${DMA_GROUP}
-PKG_USERS=		${DMA_ROOT_USER}:${DMA_GROUP}
 .endif
 
 # dma has awkward getprogname detection; essentially one must define
@@ -58,7 +64,10 @@ CFLAGS+=	-DHAVE_GETPROGNAME
 .endif
 CFLAGS+=	-DHAVE_STRLCPY
 CFLAGS+=	-DDMA_GROUP=\"${DMA_GROUP}\"
-CFLAGS+=	-DDMA_ROOT_USER=\"${DMA_ROOT_USER}\"
+# Upstream uses the confusing and unhelpful name "DMA_ROOT_USER" to
+# specify the unprivileged user that dma drops privs to, when invoked
+# as root.  https://github.com/corecode/dma/issues/175
+CFLAGS+=	-DDMA_ROOT_USER=\"${DMA_USER}\"
 
 MAKE_ENV+=	CONFDIR=${PKG_SYSCONFDIR}
 MAKE_ENV+=	LIBS=${LIBS:Q}
