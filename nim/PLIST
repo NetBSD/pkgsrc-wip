@@ -1,9 +1,12 @@
-@comment $NetBSD: PLIST,v 1.22 2026/11/17 15:00:37 wiz Exp $
+@comment $NetBSD$
 bin/nim
 bin/nimble
 bin/nimgrep
 bin/nimsuggest
 nim/bin/nim
+nim/bin/nimble
+nim/bin/nimgrep
+nim/bin/nimsuggest
 nim/compiler/aliasanalysis.nim
 nim/compiler/aliases.nim
 nim/compiler/ast.nim

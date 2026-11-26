@@ -115,7 +115,8 @@ do-install:
 		${DESTDIR}${PREFIX}
 
 .for fn in nim nimble nimsuggest nimgrep
-	${INSTALL} ${WRKSRC}/bin/${fn} ${DESTDIR}${PREFIX}/bin/${fn}
+	${INSTALL} ${WRKSRC}/bin/${fn} ${DESTDIR}${PREFIX}/nim/bin/${fn}
+	${LN} -sf ${DESTDIR}${PREFIX}/nim/bin/${fn} ${DESTDIR}${PREFIX}/bin/${fn}
 .endfor
 
 .include "options.mk"
