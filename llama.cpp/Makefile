@@ -23,10 +23,10 @@ CMAKE_CONFIGURE_ARGS+=	-DLLAMA_BUILD_TESTS=NO
 CMAKE_CONFIGURE_ARGS+=	-DLLAMA_USE_SYSTEM_GGML=YES
 
 post-extract:
-	${LN} -s ${WRKDIR}/llama-b${LLAMA_BUILD_NUMBER} ${WRKSRC}/tools/ui/dist
+	${LN} -s ${WRKDIR}/llama-b${LLAMA_BUILD_NUMBER} ${WRKSRC}/ui/apps/chat/dist
 
 .include "../../www/curl/buildlink3.mk"
-BUILDLINK_API_DEPENDS.ggml+=	ggml>=1.0.0
+BUILDLINK_API_DEPENDS.ggml+=	ggml>=1.1.1
 .include "../../math/ggml/buildlink3.mk"
 .include "../../devel/cmake/build.mk"
 .include "../../mk/bsd.pkg.mk"
