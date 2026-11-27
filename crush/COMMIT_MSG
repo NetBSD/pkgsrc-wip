@@ -1,47 +1,11 @@
-crush: Update to version 0.103.0
+crush: Update to version 0.104.0
 
 Changelog
 New!
-cff5006: feat(mcp): cap large tool output and fix doc link (#4436) (@andrinoff)
-4971300: feat(server): add to config as "experemental" feature (#4324) (@andrinoff)
-ee51fe8: feat(ui): show bash and job output live while commands run (#4276) (@KunoDLK)
-3d00da8: feat: allow to change the model and reasoning during a run (#4325) (@andrinoff)
-fb46436: feat: integrate charm.land/turtle core utilities (#4423) (@andreynering)
-f79634b: feat: program resume protocol (OSC 7577) (#4434) (@andrinoff)
+1bc9788: feat: onboarding ux pass (#4444) (@andreynering)
 Fixed
-47b4166: fix(cmd): let crush session follow the client_server config option (#4415) (@andrinoff)
-963ec05: fix(cmd): make --host connect to the server and read sessions there (#4394) (@andrinoff)
-b9ffb03: fix(cmd): resolve relative --host and --prompt paths before using --cwd (#4417) (@andrinoff)
-aba74b5: fix(cmd): show the workspace creation error once instead of twice (#4395) (@andrinoff)
-9a8b845: fix(cmd): stop commands hanging on exit when the server stops answering (#4408) (@andrinoff)
-b21ff3f: fix(cmd): stop crush logout from starting a server in local mode (#4413) (@andrinoff)
-56a64e4: fix(cmd): warn about the permission mode a project really runs in (#4416) (@andrinoff)
-7fa693e: fix(config): make crushrc exports reach Crush and stop expanding values twice (@taciturnaxolotl)
-d638d3b: fix(mcp): keep MCP servers running after the call that started them (#4407) (@andrinoff)
-a787a05: fix(run): print the whole answer in crush run (#4270) (@AnyCPU)
-b0c450b: fix(server): keep --prompt overrides when a client reconnects (#4404) (@andrinoff)
-0429368: fix(server): keep a server started with crush server running for other builds (#4410) (@andrinoff)
-b63cdbd: fix(server): keep a session's usage and summary when a client saves it (#4402) (@andrinoff)
-76f74e4: fix(server): keep plan mode in step across windows on a project (#4418) (@andrinoff)
-66ef121: fix(server): resume a run waiting for re-login once the user signs in (#4403) (@andrinoff)
-5637227: fix(server): send file history with its timestamps to clients (#4405) (@andrinoff)
-56e0bda: fix(server): show global skill and MCP toggles in every window (#4409) (@andrinoff)
-6e54ac2: fix(server): stop a new window from getting other sessions' prompts (#4406) (@andrinoff)
-27aeb6c: fix(server): stop clients warning about other clients' session switches (#4401) (@andrinoff)
-e596bad: fix(server): stop crush server from leaking the env (#4391) (@andrinoff)
-18bc386: fix(server): title sessions started with a ! command in client/server mode (#4411) (@andrinoff)
-8fa8bb1: fix(ui): keep an open permission dialog when its request is sent again (#4414) (@andrinoff)
-2609410: fix(ui): list the quit shortcut once on the project setup screen (#4400) (@andrinoff)
-d9a3849: fix(ui): show ! commands run from another window on the same session (#4412) (@andrinoff)
-aaf1eeb: fix: allow for session improvements (#4318) (@andrinoff)
-Docs
-70a46fb: docs: add the client / server mode specs (#4322) (@andrinoff)
-535dad0: docs: move the channels out of the README (#4421) (@andrinoff)
+1396e64: fix(pinentry): keep the gpg passphrase hint out of terminal scrollback (@taciturnaxolotl)
 Other stuff
-07f4baf: Fix/bash process cleanup (#4339) (@janearc)
-6ce1491: chore(nix): update nixpkgs so the dev shell's linter can read Go 1.27 packages (#4366) (@taciturnaxolotl)
-f84f6c6: chore: add a .taskrc.yml (@andreynering)
-603a22a: ci(labeler): label on a schedule instead of pull_request_target (@taciturnaxolotl)
-11cc53e: server: keep explicit servers and their workspaces alive (#4352) (@meowgorithm)
-db8e2ef: server: only log source in debug mode, with a short path (@meowgorithm)
+bfc989d: chore: auto-update files (@charmcli)
+1ad0adb: chore: update fantasy and catwalk (@andreynering)
 
