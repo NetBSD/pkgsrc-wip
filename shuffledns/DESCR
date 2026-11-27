@@ -1,0 +1,3 @@
+MassDNS wrapper written in go to enumerate valid subdomains using
+active bruteforce as well as resolve subdomains with wildcard
+filtering and easy input-output support.
