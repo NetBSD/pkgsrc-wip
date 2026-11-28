@@ -8,7 +8,7 @@ GITHUB_TAG=	v${PKGVERSION_NOREV}
 MAINTAINER=	drixter@e-utp.net
 HOMEPAGE=	https://github.com/projectdiscovery/shuffledns
 COMMENT=	Wrapper around massdns, written in go
-LICENSE=	mit
+LICENSE=	gnu-gpl-v3
 
 GO_BUILD_PATTERN+=	./cmd/shuffledns
 
