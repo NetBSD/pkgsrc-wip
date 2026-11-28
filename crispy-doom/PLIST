@@ -8,11 +8,9 @@ bin/crispy-hexen-setup
 bin/crispy-server
 bin/crispy-strife
 bin/crispy-strife-setup
-${PLIST.sysv}man/man4/crispy-default.cfg.4
 ${PLIST.sysv}man/man4/crispy-doom.cfg.4
 ${PLIST.sysv}man/man4/crispy-heretic.cfg.4
 ${PLIST.sysv}man/man4/crispy-strife.cfg.4
-${PLIST.bsd}man/man5/crispy-default.cfg.5
 ${PLIST.bsd}man/man5/crispy-doom.cfg.5
 ${PLIST.bsd}man/man5/crispy-heretic.cfg.5
 ${PLIST.bsd}man/man5/crispy-hexen.cfg.5
@@ -38,7 +36,6 @@ share/bash-completion/completions/crispy-hexen
 share/bash-completion/completions/crispy-strife
 share/doc/crispy-doom/CMDLINE.doom
 share/doc/crispy-doom/COPYING.md
-share/doc/crispy-doom/ChangeLog
 share/doc/crispy-doom/INSTALL.doom
 share/doc/crispy-doom/INSTALL.pkgsrc
 share/doc/crispy-doom/NEWS.md
